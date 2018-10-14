@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StudentsBook</string>
+    <string name="addStudent_btn">Добавить</string>
+    <string name="delStudent_btn">Удалить</string>
+    <string name="AddStudent_lbl">Новый студент</string>
+    <string name="firstName_lbl">Имя:</string>
+    <string name="lastName_lbl">Фамилия:</string>
+    <string name="group_lbl">Группа:</string>
+    <string name="male_lbl">Пол:</string>
+    <string name="btn_OK">Добавить</string>
+</resources>
