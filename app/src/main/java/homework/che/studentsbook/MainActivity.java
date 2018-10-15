@@ -3,6 +3,7 @@ package homework.che.studentsbook;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -13,6 +14,7 @@ import java.util.List;
 
 public class MainActivity extends Activity{
 
+    private static final String TAG ="myLogs" ;
     static List<Student> students=new ArrayList<>();
     StudentBookAdapter adapter;
 
@@ -36,6 +38,7 @@ public class MainActivity extends Activity{
             newStudent=(Student) arguments.getSerializable(Student.class.getSimpleName());
             students.add(newStudent);
             adapter.updateBook(students);
+            Log.d(TAG,"mainActivity:"+newStudent.toString());
         }
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

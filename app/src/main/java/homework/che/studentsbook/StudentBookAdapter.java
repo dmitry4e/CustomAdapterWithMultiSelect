@@ -58,17 +58,18 @@ public class StudentBookAdapter extends BaseAdapter {
         }
 
         Student student=students.get(position);
+        String bufferedMale=student.getMale().toString();
 
         //заполняем вью
-        if(student.getMale()=="муж"||student.getMale()=="male"){
+        if(bufferedMale.equals("муж")||bufferedMale.equals("male")){
             holder.avatar_IV.setImageResource(R.drawable.male);
         }
-        else if((student.getMale()=="жен"||student.getMale()=="famale")){
-            holder.avatar_IV.setImageResource(R.drawable.famale);
+        else if(bufferedMale.equals("жен")||bufferedMale.equals("female")){
+            holder.avatar_IV.setImageResource(R.drawable.female);
         }
-        else{
+        /*else{
             holder.avatar_IV.setImageResource(R.drawable.famale);
-        }
+        }*/
         holder.firstName_TV.setText(student.getFirstName());
         holder.lastName_TV.setText(student.getLastName());
         holder.group_TV.setText(student.getGroup());

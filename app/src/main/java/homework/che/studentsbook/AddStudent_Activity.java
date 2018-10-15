@@ -3,10 +3,12 @@ package homework.che.studentsbook;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 public class AddStudent_Activity extends Activity{
+    private static final String TAG = "myLogs";
 
 
     @Override
@@ -32,6 +34,8 @@ public class AddStudent_Activity extends Activity{
 
         Intent answerIntent=new Intent(this, MainActivity.class);
         answerIntent.putExtra(Student.class.getSimpleName(),newStudent);
+
+        Log.d(TAG,"addActivity:"+newStudent.toString());
 
         startActivity(answerIntent);
     }
