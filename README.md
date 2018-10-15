@@ -1,2 +1,0 @@
-# CustomAdapterWithMultiSelect
-DZ ListView
